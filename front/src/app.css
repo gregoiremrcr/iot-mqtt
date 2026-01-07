@@ -1,0 +1,151 @@
+/* Minimal clean UI */
+:root{
+  --bg1: #0b1020;
+  --bg2: #0a1b2a;
+  --card: rgba(255,255,255,.08);
+  --card2: rgba(255,255,255,.06);
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.68);
+  --good: rgba(80, 255, 170, .9);
+  --bad: rgba(255, 120, 120, .9);
+  --warn: rgba(255, 200, 90, .95);
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius: 18px;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: var(--sans);
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 20% 10%, #142a55 0%, transparent 60%),
+              radial-gradient(900px 700px at 80% 30%, #0d3a2e 0%, transparent 55%),
+              linear-gradient(160deg, var(--bg1), var(--bg2));
+  min-height: 100vh;
+}
+a{color:inherit}
+.container{max-width:1100px;margin:0 auto;padding:28px 18px 40px}
+.header{
+  display:flex; gap:16px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap;
+}
+h1{font-size:28px; margin:0 0 6px}
+.subtitle{color:var(--muted); margin:0}
+.pill{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:8px 12px; border-radius:999px;
+  background: var(--card); border:1px solid rgba(255,255,255,.10);
+  box-shadow: var(--shadow);
+  font-family: var(--mono); font-size: 12px;
+}
+.row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+.toolbar{
+  margin-top:18px;
+  display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between;
+}
+select, input{
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  color: var(--text);
+  border-radius: 12px;
+  padding:10px 12px;
+  outline:none;
+}
+.grid{
+  margin-top:18px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap:14px;
+}
+.card{
+  background: linear-gradient(180deg, var(--card), var(--card2));
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius);
+  padding:14px 14px 12px;
+  box-shadow: var(--shadow);
+  position:relative;
+  overflow:hidden;
+}
+.card::before{
+  content:"";
+  position:absolute; inset:-2px;
+  background: radial-gradient(800px 120px at 20% 0%, rgba(255,255,255,.18), transparent 50%);
+  pointer-events:none;
+}
+.card.offline{opacity:.60}
+.badge{
+  font-size:12px; font-family: var(--mono);
+  padding:6px 10px; border-radius:999px;
+  border:1px solid rgba(255,255,255,.14);
+  background: rgba(0,0,0,.20);
+}
+.badge.good{border-color: rgba(80,255,170,.45); color: var(--good)}
+.badge.bad{border-color: rgba(255,120,120,.45); color: var(--bad)}
+.titleRow{display:flex; align-items:center; justify-content:space-between; gap:10px}
+.place{font-size:16px; font-weight:650}
+.big{
+  margin-top:10px;
+  display:flex; align-items:baseline; gap:10px;
+}
+.temp{
+  font-size:42px;
+  font-weight:750;
+  letter-spacing:-.02em;
+}
+.unit{color:var(--muted); font-size:14px}
+.metrics{
+  margin-top:10px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:8px 12px;
+}
+.metric{
+  padding:10px 10px;
+  border-radius: 14px;
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.16);
+}
+.metric .k{font-size:12px; color:var(--muted)}
+.metric .v{margin-top:4px; font-family:var(--mono); font-size:13px}
+.footer{
+  margin-top:10px;
+  display:flex; justify-content:space-between; align-items:center; gap:10px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.section{
+  margin-top:24px;
+  padding-top:18px;
+  border-top: 1px solid rgba(255,255,255,.10);
+}
+.section h2{margin:0 0 10px; font-size:18px}
+.table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing: 0 10px;
+}
+.table th{
+  text-align:left;
+  color: var(--muted);
+  font-size:12px;
+  font-family: var(--mono);
+  font-weight: 600;
+  padding:0 10px;
+}
+.table td{
+  padding: 12px 10px;
+  background: rgba(0,0,0,.18);
+  border-top:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.table tr td:first-child{
+  border-left:1px solid rgba(255,255,255,.08);
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+}
+.table tr td:last-child{
+  border-right:1px solid rgba(255,255,255,.08);
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+.small{font-family: var(--mono); font-size: 12px}

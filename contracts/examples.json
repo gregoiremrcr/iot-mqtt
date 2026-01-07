@@ -1,0 +1,28 @@
+{
+  "classroom/device-001/telemetry": {
+    "temperature": 22.4,
+    "humidity": 41.7,
+    "battery": 3.86,
+    "timestamp": 1736240000000
+  },
+  "classroom/device-001/events": {
+    "type": "boot",
+    "reason": "power_on",
+    "timestamp": 1736240000123
+  },
+  "classroom/device-001/status": {
+    "online": true,
+    "fw": "1.0.3",
+    "rssi": -61,
+    "timestamp": 1736240000456
+  },
+  "classroom/device-001/cmd": {
+    "action": "set_interval",
+    "intervalMs": 5000
+  },
+  "flipper/device-777/button": {
+    "button": "A",
+    "value": 1,
+    "timestamp": 1736240000789
+  }
+}
