@@ -37,4 +37,4 @@ npm run dev -- --open
 
 - Grégoire MERCIER
 - Alexis HU
-
+- Mehdi BENCHRIF
