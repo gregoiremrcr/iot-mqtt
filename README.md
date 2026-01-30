@@ -32,4 +32,9 @@ npm run dev -- --open
 ## Notes
 - Online/offline : une station est **online** si elle a publié il y a moins de 60s.
 - Le parsing du `deviceId` se fait via le topic (`classroom/<deviceId>/telemetry` ou `flipper/<deviceId>/...`).
-Projet de Grégoire MERCIER
+
+## Réalisé par
+
+- Grégoire MERCIER
+- Alexis HU
+
